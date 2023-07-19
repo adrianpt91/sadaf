@@ -18,14 +18,22 @@ html {
 }
 
 /* ********************************** */
-/*             UTILIDADES             */
+/*             UTILITIES              */
 /* ********************************** */
-.container {
-	margin: 0 auto;
-	scroll-snap-type: y mandatory;
+@media (min-height: 30em) {
+	main {
+		scroll-snap-type: y mandatory;
+		height: 100vh;
+		overflow-y: auto;
+		scroll-behavior: smooth;
+	}
+	.child {
+		height: 100vh;
+	}
 }
-.container .child {
-	scroll-snap-align: start;
+.child {
+	scroll-snap-align: center;
+	min-height: 100vh;	
 }
 /* ********************************** */
 /*               HEADER               */
@@ -42,6 +50,10 @@ header {
 header .logo {
 	margin-top: 0px;
 	margin-left: 30px;
+}
+
+header .logo .white{
+	display: none;
 }
 
 header .logo svg{
@@ -61,6 +73,10 @@ header .menu-icon {
 .rotate {
     transform: rotate(45deg);
     transition: transform 0.3s ease;
+}
+
+.rotate svg line{
+	stroke: #fff;
 }
 
 /* ********************************** */
@@ -185,12 +201,67 @@ header .menu-icon {
 .menu.show .contact-block a:hover li, a:focus li{ 
 	color: #FFD601;
 }
+
+/* ********************************** */
+/*               HOME BOTTOM          */
+/* ********************************** */
+.home-bottom {
+	background: #fff;
+    height: 100vh;
+	background-image: url('../images/home2_back.png');
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.home-bottom .home-bottom-text{
+	width: 100%;
+    height: 100%;
+    padding: 20rem 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+	row-gap: 2rem;
+}
+.home-bottom .home-bottom-text h1{
+	font-weight: 800;
+	font-size: 80px;
+	line-height: 82px;
+}
+
+.home-bottom .home-bottom-text h1 span{
+	color: #1DB19E;
+	padding: 0rem 10rem;
+}
+
+.home-bottom .home-bottom-text p{
+	font-weight: 400;
+	font-size: 32px;
+	line-height: 37px;
+	text-transform: inherit;
+	padding: 2rem 12rem;
+}
+.home-bottom .home-bottom-text .home-bottom-button{
+	display: flex;
+    justify-content: center;
+}
+
+.home-bottom .home-bottom-text .home-bottom-button a{
+	border: 1px solid #000;
+    border-radius: 100%;
+    padding: 3rem 4.25rem;
+}
+
 /* ********************************** */
 /*               ABOUT US             */
 /* ********************************** */
 .aboutus {
 	background: #70E1CC;
     height: 100vh;
+	background-image: url('../images/about_back.png');
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .aboutus .about-text{
 	width: 100%;
@@ -224,6 +295,7 @@ header .menu-icon {
 .aboutus .about-text .read-more{
 	display: flex;
     justify-content: center;
+	padding: 2rem;
 }
 
 .aboutus .about-text .read-more a{
@@ -294,5 +366,24 @@ header .menu-icon {
 	.menu.show .main-menu a li {
 		line-height: 20px;
 		font-size: 40px;
+	}
+
+	.home-bottom .home-bottom-text h1{
+		font-size: 40px;
+		line-height: 50px;
+	}
+
+	.home-bottom .home-bottom-text p{
+		font-size: 18px;
+		line-height: 30px;
+	}
+
+	.aboutus .about-text h4{
+		font-size: 24px;
+	}
+	
+	.aboutus .about-text p{
+		font-size: 18px;
+		line-height: 30px;
 	}
 }
