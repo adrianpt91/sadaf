@@ -44,7 +44,7 @@ header {
 	align-items: center;
     padding: 2rem;
 	position: fixed;
-	z-index: 1;
+	z-index: 2;
 	width: 100%;
 }
 header .logo {
@@ -85,6 +85,18 @@ header .menu-icon {
 .home {
 	overflow: hidden;
 	height: 100vh;
+	position: relative;
+}
+
+.home::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.3); /* Adjust the alpha value for darkness */
+	z-index: 0;
 }
 .home video {
 	position: relative;
@@ -109,6 +121,7 @@ header .menu-icon {
     padding: 20rem;
 	transition: all 0.6s ease-in-out;
   	top: 0;
+	z-index: 1;
 }
 
 .menu.show a {
@@ -311,6 +324,141 @@ header .menu-icon {
 }
 .aboutus .about-text .read-more a span{
 	margin-left: 2rem;
+}
+
+/* ********************************** */
+/*               ABOUT US             */
+/* ********************************** */
+.services {
+	background: #FFF;
+    height: 100vh;
+	background-image: url('../images/services_back.png');
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.services .services-text{
+	width: 100%;
+    height: 100%;
+    padding: 20rem 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+	row-gap: 2rem;
+}
+.services .services-text h1{
+	font-weight: 700;
+	font-size: 62px;
+	line-height: 72px;
+	text-transform: uppercase;
+	color: #1DB19E;
+}
+.services .services-text h4{
+	font-weight: 400;
+	font-size: 32px;
+	line-height: 35px;
+	text-transform: uppercase;
+}
+
+.services .services-text p{
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 17px;
+	text-transform: inherit;
+}
+.services .services-text .services-more{
+	display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.services .services-text .services-more .service{ 
+	display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: start;
+}
+.service.first .icon{
+	position: absolute;
+    padding-top: 4rem;
+    width: 40px;
+}
+.service.first .service-text{
+	position: absolute;
+    bottom: 5rem;
+    width: 200px;
+    font-size: 20px;
+    font-weight: 800;
+}
+.service.second .icon{
+	position: absolute;
+    padding-top: 4rem;
+    width: 60px;
+}
+.service.second .service-text{
+	position: absolute;
+    bottom: 4rem;
+    width: 110px;
+    font-size: 20px;
+    font-weight: 800;
+}
+.service.three .icon{
+	position: absolute;
+    padding-top: 4rem;
+    width: 80px;
+}
+.service.three .service-text{
+	position: absolute;
+    bottom: 3rem;
+    width: 110px;
+    font-size: 20px;
+    font-weight: 800;
+}
+.service.four .icon{
+	position: absolute;
+    padding-top: 4rem;
+    width: 80px;
+}
+.service.four .service-text{
+	position: absolute;
+    bottom: 4rem;
+    width: 200px;
+    font-size: 20px;
+    font-weight: 800;
+}
+.service.five .icon{
+	position: absolute;
+    padding-top: 4rem;
+    width: 80px;
+}
+.service.five .service-text{
+	position: absolute;
+    bottom: 5rem;
+    width: 200px;
+    font-size: 20px;
+    font-weight: 800;
+}
+.service.six .icon{
+	position: absolute;
+    padding-top: 4rem;
+    width: 60px;
+}
+.service.six .service-text{
+	position: absolute;
+    bottom: 5rem;
+    width: 110px;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.services .services-text .services-more .service .circle{
+	width: 200px;
+}
+
+.services .services-text .service-wrapper {
+	display: flex;
+    justify-content: center;
+    margin-top: 2rem;
 }
 /* ********************************** */
 /*               FOOTER               */
