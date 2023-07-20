@@ -44,7 +44,7 @@ header {
 	align-items: center;
     padding: 2rem;
 	position: fixed;
-	z-index: 2;
+	z-index: 3;
 	width: 100%;
 }
 header .logo {
@@ -121,7 +121,7 @@ header .menu-icon {
     padding: 20rem;
 	transition: all 0.6s ease-in-out;
   	top: 0;
-	z-index: 1;
+	z-index: 2;
 }
 
 .menu.show a {
@@ -327,7 +327,7 @@ header .menu-icon {
 }
 
 /* ********************************** */
-/*               ABOUT US             */
+/*               SERVICES             */
 /* ********************************** */
 .services {
 	background: #FFF;
@@ -511,11 +511,13 @@ header .menu-icon {
 /*       MEDIA QUERIES -- 1370px       */
 /* ********************************** */
 @media (max-width: 1370px) {
+	/*MENU*/
 	.menu.show .main-menu a li {
 		line-height: 20px;
 		font-size: 40px;
 	}
 
+	/*HOME*/
 	.home-bottom .home-bottom-text h1{
 		font-size: 40px;
 		line-height: 50px;
@@ -526,6 +528,8 @@ header .menu-icon {
 		line-height: 30px;
 	}
 
+	/*ABOUT US*/
+
 	.aboutus .about-text h4{
 		font-size: 24px;
 	}
@@ -533,5 +537,90 @@ header .menu-icon {
 	.aboutus .about-text p{
 		font-size: 18px;
 		line-height: 30px;
+	}
+
+	/*SERVICES*/
+	.services .services-text{
+		padding: 15rem 30rem;
+		row-gap: 1rem;
+	}
+	.services .services-text h4{
+		font-size: 24px;
+	}
+	.service.first .icon{
+		position: absolute;
+		padding-top: 3rem;
+		width: 30px;
+	}
+	.service.first .service-text{
+		position: absolute;
+		bottom: 4rem;
+		width: 150px;
+		font-size: 15px;
+		font-weight: 800;
+	}
+	.service.second .icon{
+		position: absolute;
+		padding-top: 3rem;
+		width: 40px;
+	}
+	.service.second .service-text{
+		position: absolute;
+		bottom: 3rem;
+		width: 80px;
+		font-size: 15px;
+		font-weight: 800;
+	}
+	.service.three .icon{
+		position: absolute;
+		padding-top: 2rem;
+		width: 60px;
+	}
+	.service.three .service-text{
+		position: absolute;
+		bottom: 2rem;
+		width: 80px;
+		font-size: 15px;
+		font-weight: 800;
+	}
+	.service.four .icon{
+		position: absolute;
+		padding-top: 3rem;
+		width: 60px;
+	}
+	.service.four .service-text{
+		position: absolute;
+		bottom: 3rem;
+		width: 150px;
+		font-size: 15px;
+		font-weight: 800;
+	}
+	.service.five .icon{
+		position: absolute;
+		padding-top: 3rem;
+		width: 60px;
+	}
+	.service.five .service-text{
+		position: absolute;
+		bottom: 4rem;
+		width: 150px;
+		font-size: 15px;
+		font-weight: 800;
+	}
+	.service.six .icon{
+		position: absolute;
+		padding-top: 3rem;
+		width: 40px;
+	}
+	.service.six .service-text{
+		position: absolute;
+		bottom: 3rem;
+		width: 80px;
+		font-size: 15px;
+		font-weight: 800;
+	}
+	
+	.services .services-text .services-more .service .circle{
+		width: 150px;
 	}
 }
