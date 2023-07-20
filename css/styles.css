@@ -98,6 +98,19 @@ header .menu-icon {
 	background-color: rgba(0, 0, 0, 0.3); /* Adjust the alpha value for darkness */
 	z-index: 0;
 }
+
+.home .logo-circle {
+	display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    position: absolute;
+}
+.home .logo-circle img{ 
+	width: 250px;
+    height: auto;
+}
 .home video {
 	position: relative;
 	right: 0;
@@ -529,6 +542,10 @@ header .menu-icon {
 	}
 
 	/*ABOUT US*/
+	.aboutus .about-text h1{
+		font-size: 40px;
+		line-height: 50px;
+	}
 
 	.aboutus .about-text h4{
 		font-size: 24px;
@@ -543,6 +560,10 @@ header .menu-icon {
 	.services .services-text{
 		padding: 15rem 30rem;
 		row-gap: 1rem;
+	}
+	.services .services-text h1{
+		font-size: 40px;
+		line-height: 50px;
 	}
 	.services .services-text h4{
 		font-size: 24px;
