@@ -93,6 +93,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const main = document.querySelector('main');
   const mouse = document.querySelector('.mouse');
   const menuIcon = document.querySelector('.menu-icon svg');
+  const sectionTitleDiv = document.querySelector('.section-title');
 
 
   function isElementInViewport(el) {
@@ -120,11 +121,18 @@ document.addEventListener('DOMContentLoaded', function () {
         logoBlack.style.display = 'none';
         mouse.classList.remove('mouseActive')
         menuIcon.classList.add('active')
+        sectionTitleDiv.innerHTML = '';
       }else {
         logoWhite.style.display = 'none';
         logoBlack.style.display = 'block';
         mouse.classList.add('mouseActive')
         menuIcon.classList.remove('active')
+        const activeSectionId = activeSection.getAttribute('id')
+        if (activeSectionId === 'home2') {
+          sectionTitleDiv.textContent = 'HOME';
+        }else {
+          sectionTitleDiv.textContent = activeSectionId;
+        }
       }
     }
   }

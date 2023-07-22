@@ -79,6 +79,16 @@ header .menu-icon svg{
 header .menu-icon {
 	cursor: pointer;
 	margin-right: 2rem;
+	display: flex;
+    align-items: center;
+}
+
+header .menu-icon .section-title {
+	font-size: 32px;
+    padding: 0 2rem;
+    line-height: 37px;
+    font-weight: 400;
+	text-transform: uppercase;
 }
 
 .rotate {
