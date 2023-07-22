@@ -26,6 +26,12 @@ html {
 		height: 100vh;
 		overflow-y: auto;
 		scroll-behavior: smooth;
+		-ms-overflow-style: none;  /* IE and Edge */
+		scrollbar-width: none;  /* Firefox */		
+	}
+	/* Hide scrollbar for Chrome, Safari and Opera */
+	main::-webkit-scrollbar {
+		display: none;
 	}
 	.child {
 		height: 100vh;
@@ -56,6 +62,10 @@ header .logo .white{
 	display: none;
 }
 
+header .logo .black{
+	display: none;
+}
+
 header .logo svg{
 	width: 140px;
 	height:  auto;
@@ -68,6 +78,7 @@ header .menu-icon svg{
 
 header .menu-icon {
 	cursor: pointer;
+	margin-right: 2rem;
 }
 
 .rotate {
@@ -76,6 +87,10 @@ header .menu-icon {
 }
 
 .rotate svg line{
+	stroke: #fff;
+}
+
+.active line {
 	stroke: #fff;
 }
 
@@ -492,6 +507,10 @@ header .menu-icon {
 	border: 3px solid #FFF;
 }
 
+.footer .mouseActive{
+	border: 3px solid #000;
+}
+
 .footer .mouse::before {
 	content: "";
 	width: 10px;
@@ -505,6 +524,10 @@ header .menu-icon {
 	opacity: 1;
 	animation: wheel 2s infinite;
 	-webkit-animation: wheel 2s infinite;
+}
+
+.footer .mouseActive::before {
+	background-color: #000;
 }
 
 @keyframes wheel {

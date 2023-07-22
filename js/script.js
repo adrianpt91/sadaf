@@ -3,19 +3,21 @@ const menu = document.querySelector('.menu');
 const main = document.querySelector('main');
 const logoWhite = document.querySelector('.white');
 const logoBlack = document.querySelector('.black');
+const mouse = document.querySelector('.mouse');
+
 menuIcon.addEventListener('click', function() {
 	menuIcon.classList.toggle('rotate');
 	menu.classList.toggle('show');
 
-	const isVisible = window.getComputedStyle(logoWhite).display !== 'none';
-
-	if (isVisible) {
-		logoWhite.style.display = 'none'; 
-		logoBlack.style.display = 'block';
-	} else {
-		logoWhite.style.display = 'block'; 
-		logoBlack.style.display = 'none'; 
-	}
+	if (mouse.classList.contains('mouseActive')) {
+    if (menu.classList.contains('show')) {
+      logoWhite.style.display = 'block';
+      logoBlack.style.display = 'none'; 
+    }else {
+      logoWhite.style.display = 'none'; 
+      logoBlack.style.display = 'block';
+    }		
+	} 
 });
 
 const canvas = document.getElementById("particleCanvas");
@@ -82,3 +84,55 @@ function animateParticles() {
 
 initializeParticles();
 animateParticles();
+
+//Change logo depending on my section
+document.addEventListener('DOMContentLoaded', function () {
+  const sections = document.querySelectorAll('section');
+  const logoWhite = document.querySelector('.white');
+  const logoBlack = document.querySelector('.black');
+  const main = document.querySelector('main');
+  const mouse = document.querySelector('.mouse');
+  const menuIcon = document.querySelector('.menu-icon svg');
+
+
+  function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  function checkActiveSection() {
+    let activeSection = null;
+
+    sections.forEach(section => {
+        if (isElementInViewport(section)) {
+            activeSection = section;
+        }
+    });
+
+    if (activeSection) {
+      if(activeSection.classList.contains('home')) {
+        logoWhite.style.display = 'block';
+        logoBlack.style.display = 'none';
+        mouse.classList.remove('mouseActive')
+        menuIcon.classList.add('active')
+      }else {
+        logoWhite.style.display = 'none';
+        logoBlack.style.display = 'block';
+        mouse.classList.add('mouseActive')
+        menuIcon.classList.remove('active')
+      }
+    }
+  }
+
+  // Initial check when the page loads
+  checkActiveSection();
+
+  // Check on scroll to update the active section
+  main.addEventListener('scroll', checkActiveSection);
+});
+
