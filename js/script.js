@@ -94,6 +94,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const mouse = document.querySelector('.mouse');
   const menuIcon = document.querySelector('.menu-icon svg');
   const sectionTitleDiv = document.querySelector('.section-title');
+  const header = document.querySelector('header');
 
 
   function isElementInViewport(el) {
@@ -128,9 +129,19 @@ document.addEventListener('DOMContentLoaded', function () {
         mouse.classList.add('mouseActive')
         menuIcon.classList.remove('active')
         const activeSectionId = activeSection.getAttribute('id')
+        if (activeSectionId === 'footer') {
+          header.style.display = 'none';
+          mouse.style.display = 'none';
+        }else {
+          header.style.display = 'flex';
+          mouse.style.display = 'flex';
+        }
+
         if (activeSectionId === 'home2') {
           sectionTitleDiv.textContent = 'HOME';
-        }else {
+        }else if (activeSectionId === 'contactus') {
+          sectionTitleDiv.textContent = 'CONTACT US';
+        }else{
           sectionTitleDiv.textContent = activeSectionId;
         }
       }
