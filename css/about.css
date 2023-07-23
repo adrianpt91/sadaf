@@ -1,0 +1,532 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,900,700,500,300,100');
+
+:root {
+	--primary-color: #c7a17a;
+	--background-color: #f9f5f0;
+	--dark-color: #151515;
+}
+
+html {
+	font-size: 62.5%;
+	font-family: "Roboto";
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* ********************************** */
+/*             UTILITIES              */
+/* ********************************** */
+@media (min-height: 30em) {
+	main {
+		scroll-snap-type: y mandatory;
+		height: 100vh;
+		overflow-y: auto;
+		scroll-behavior: smooth;
+		-ms-overflow-style: none;  /* IE and Edge */
+		scrollbar-width: none;  /* Firefox */		
+	}
+	/* Hide scrollbar for Chrome, Safari and Opera */
+	main::-webkit-scrollbar {
+		display: none;
+	}
+	.child {
+		height: 100vh;
+	}
+}
+.child {
+	scroll-snap-align: center;
+	min-height: 100vh;	
+}
+/* ********************************** */
+/*               HEADER               */
+/* ********************************** */
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+    padding: 2rem;
+	position: fixed;
+	z-index: 3;
+	width: 100%;
+}
+header .logo {
+	margin-top: 0px;
+	margin-left: 30px;
+}
+
+header .logo .white{
+	display: none;
+}
+
+header .logo .black{
+	display: block;
+}
+
+header .logo svg{
+	width: 140px;
+	height:  auto;
+}
+
+header .menu-icon svg{
+	width: 35px;
+	height:  auto;
+}
+
+header .menu-icon {
+	cursor: pointer;
+	margin-right: 30px;
+	display: flex;
+    align-items: center;
+}
+
+header .menu-icon .section-title {
+	font-size: 32px;
+    padding: 0 2rem;
+    line-height: 37px;
+    font-weight: 400;
+	text-transform: uppercase;
+}
+
+.rotate svg{
+    transform: rotate(45deg);
+    transition: transform 0.3s ease;
+}
+
+.rotate svg line{
+	stroke: #fff;
+}
+
+.active line {
+	stroke: #fff;
+}
+
+/* ********************************** */
+/*               HOME                 */
+/* ********************************** */
+.home {
+	overflow: hidden;
+	height: 100vh;
+	position: relative;
+}
+
+.home::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.3); /* Adjust the alpha value for darkness */
+	z-index: 0;
+}
+
+.home .logo-circle {
+	display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    position: absolute;
+}
+.home .logo-circle img{ 
+	width: 250px;
+    height: auto;
+}
+.home video {
+	position: relative;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+	z-index: -1;
+}
+
+.menu {
+	position: fixed;
+  	top: -100%;
+}
+
+.menu.show {
+	display: block;
+	width: 100%;
+    height: 100%;
+    background: #000;
+    font-family: 'Roboto';    
+    padding: 20rem;
+	transition: all 0.6s ease-in-out;
+  	top: 0;
+	z-index: 2;
+}
+
+.menu.show a {
+	text-decoration: none;
+}
+
+.menu.show a li {
+	color: #fff;
+    cursor: pointer;
+    list-style-type: none;
+    line-height: 55px;
+    padding: 2rem;
+	font-size: 62px;
+}
+
+.menu.show .main-menu a li:hover {
+	color: #FFD601;
+	font-style: italic;
+}
+.menuItems {
+	display: flex;
+	justify-content: space-between;
+}
+.menuItems .social-buttons{
+	display: flex;
+	align-items: flex-end;
+    justify-content: flex-end;
+	flex-direction: column;
+    row-gap: 2rem;
+}
+.menuItems .social-buttons div{
+	display: flex;
+}
+.menuItems .social-buttons a{
+	text-transform: uppercase;
+	border-radius: 50px;
+	border: 1px solid #FFD601;
+	text-decoration: none;
+	margin-left: 1rem;
+	margin-right: 1rem;
+    width: 180px;
+    text-align: center;
+	transition: 0.25s;
+}
+
+.menuItems .social-buttons a:hover, 
+.menuItems .social-buttons a:focus{ 
+	border-color: #fff;
+  	color: #FFD601;
+	box-shadow: inset 180px 0 0 0 #fff;
+}
+
+.menuItems .social-buttons a:hover li, a:focus li{ 
+	color: #FFD601;
+}
+
+.menuItems .social-buttons a li{
+	color: #fff;
+    cursor: pointer;
+    list-style-type: none;
+    line-height: 28px;
+    padding: 1.5rem;
+	font-size: 24px;
+}
+.menu.show .contact-block {
+	display: flex;
+    height: 50%;
+    justify-content: end;
+    align-items: end;
+}
+.menu.show .contact-block a{
+	width: 280px;
+    text-align: center;
+    transition: 0.25s;
+    text-transform: uppercase;
+    border-radius: 50px;
+    border: 1px solid #fff;
+    text-decoration: none;
+}
+.menu.show .contact-block a li{
+	color: #fff;
+    cursor: pointer;
+    list-style-type: none;
+    line-height: 28px;
+    padding: 1.5rem 2rem;
+    font-size: 32px;
+}
+.menu.show .contact-block a:hover, 
+.menu.show .contact-block a:focus{ 
+	box-shadow: inset 280px 0 0 0 #fff;
+}
+.menu.show .contact-block a:hover li, a:focus li{ 
+	color: #FFD601;
+}
+
+/* ********************************** */
+/*               ABOUT FIRST          */
+/* ********************************** */
+.about-first {
+    height: 100vh;
+	background-image: url('../images/about/first_back.png');
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	position: relative;
+}
+.about-first::before {
+	content: ""; 
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 70%; 
+	background-color: #70E1CC; 
+	z-index: -1; 
+}
+.about-first .about-first-text{
+	width: 100%;
+    height: 100%;
+    padding: 15rem 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    text-align: center;
+	row-gap: 2rem;
+}
+.about-first .about-first-text h1{
+	font-weight: 800;
+	font-size: 80px;
+	line-height: 82px;
+}
+
+.about-first .about-first-text h4{
+	font-weight: 400;
+	font-size: 62px;
+	line-height: 72px;
+	text-transform: uppercase;
+	padding: 0 18rem;
+}
+.about-first .about-first-button{
+	display: flex;
+    justify-content: center;
+	padding-bottom: 6rem;
+}
+
+.about-first .about-first-button a{
+	border: 1px solid #000;
+    border-radius: 100%;
+    padding: 3rem 4.25rem;
+}
+
+.about-first .about-first-text .newsletter-form {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-first .about-first-text .newsletter-form .form-control {
+	position: relative;
+    margin: 40px 0 20px;
+    width: 550px;
+  }
+  
+.about-first .about-first-text .newsletter-form  .form-control .input {
+	border: 0;
+    border-radius: 50px;
+    display: block;
+    font-family: "Roboto";
+    font-size: 24px;
+    height: 80px;
+    padding: 1rem 4rem;
+    width: 100%;
+}
+  
+.about-first .about-first-text .newsletter-form .form-control .btn {
+	background-color: #FB6C26;
+    border: 0;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 32px;
+    height: 80px;
+    padding: 1rem 6rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.about-first-wrapper {
+	display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.about-first-img {
+	position: absolute;
+    bottom: 25rem;
+    width: 450px;
+    left: 8rem;
+}
+.about-second-img {
+	position: absolute;
+    bottom: 30rem;
+    right: 4rem;
+    width: 450px;
+}
+
+/* ********************************** */
+/*               ABOUT SECOND         */
+/* ********************************** */
+.about-second {
+	background: #fff;
+    height: 100vh;
+	background-image: url('../images/about/second_back.png');
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	position: relative;
+}
+.about-second-wrapper {
+	display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.about-second .about-second-text{
+	width: 100%;
+    height: 100%;
+    padding: 15rem 50rem 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+	row-gap: 2rem;
+}
+.about-second .about-second-text h1{
+	font-weight: 700;
+	font-size: 62px;
+	line-height: 72px;
+	text-transform: uppercase;
+}
+.about-second .about-second-text h4{
+	font-weight: 400;
+	font-size: 48px;
+	line-height: 55px;
+	text-transform: uppercase;
+}
+
+.about-second .about-second-text p{
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 18px;
+	text-transform: inherit;
+}
+.about-second .about-second-button{
+	display: flex;
+    justify-content: center;
+	padding-bottom: 6rem;
+}
+
+.about-second .about-second-button a{
+	border: 1px solid #000;
+    border-radius: 100%;
+    padding: 3rem 4.25rem;
+}
+.about-second .about-second-text .text-wrapper {
+	display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    padding: 5rem 15rem 0;
+}
+.about-second-phone {
+	position: absolute;
+    bottom: 25rem;
+    width: 350px;
+    left: 15rem;
+}
+.about-second-tv {
+	position: absolute;
+    bottom: 40rem;
+    right: 10rem;
+    width: 350px;
+}
+/* ********************************** */
+/*               ABOUT THIRD          */
+/* ********************************** */
+.about-third {
+	background: #fff;
+    height: 100vh;
+	background-image: url('../images/about/third_back.png');
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	position: relative;
+}
+.about-third-wrapper {
+	display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.about-third .about-third-text{
+	width: 100%;
+    height: 100%;
+    padding: 15rem 50rem 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    text-align: center;
+	row-gap: 2rem;
+}
+.about-third .about-third-text h1{
+	font-weight: 700;
+	font-size: 62px;
+	line-height: 72px;
+	text-transform: uppercase;
+}
+
+.about-third .about-third-text p{
+	font-weight: 400;
+	font-size: 32px;
+	line-height: 37px;
+	text-transform: inherit;
+}
+.about-third .about-third-button{
+	display: flex;
+    justify-content: center;
+	padding-bottom: 6rem;
+}
+
+.about-third .about-third-button a{
+	border: 1px solid #000;
+    border-radius: 100%;
+    padding: 4rem 3rem;
+}
+.about-third .about-third-text .text-wrapper {
+	display: flex;
+    flex-direction: column;
+}
+/* ********************************** */
+/*       MEDIA QUERIES -- 1370px       */
+/* ********************************** */
+@media (max-width: 1370px) {
+	/*MENU*/
+	.menu.show .main-menu a li {
+		line-height: 20px;
+		font-size: 40px;
+	}
+
+	/*HOME*/
+	.home-bottom .home-bottom-text h1{
+		font-size: 40px;
+		line-height: 50px;
+	}
+
+	.home-bottom .home-bottom-text p{
+		font-size: 18px;
+		line-height: 30px;
+	}
+
+	/*ABOUT US*/
+	.aboutus .about-text h1{
+		font-size: 40px;
+		line-height: 50px;
+	}
+
+	.aboutus .about-text h4{
+		font-size: 24px;
+	}
+	
+	.aboutus .about-text p{
+		font-size: 18px;
+		line-height: 30px;
+	}
+}

@@ -78,7 +78,7 @@ header .menu-icon svg{
 
 header .menu-icon {
 	cursor: pointer;
-	margin-right: 2rem;
+	margin-right: 30px;
 	display: flex;
     align-items: center;
 }
