@@ -345,6 +345,7 @@ header .menu-icon .section-title {
     position: absolute;
     top: 0;
     right: 0;
+	cursor: pointer;
 }
 .about-first-wrapper {
 	display: flex;
@@ -515,18 +516,137 @@ header .menu-icon .section-title {
 		line-height: 30px;
 	}
 
-	/*ABOUT US*/
-	.aboutus .about-text h1{
-		font-size: 40px;
-		line-height: 50px;
+	/*ABOUT FIRST*/
+	.about-first .about-first-text{
+		row-gap: 1rem;
 	}
-
-	.aboutus .about-text h4{
-		font-size: 24px;
+	.about-first .about-first-text h1{
+		font-weight: 800;
+		font-size: 40px;
+		line-height: 40px;
 	}
 	
-	.aboutus .about-text p{
-		font-size: 18px;
+	.about-first .about-first-text h4{
+		font-size: 24px;
 		line-height: 30px;
+		padding: 0 20rem;
+	}
+	.about-first .about-first-button{
+		padding-bottom: 4rem;
+	}
+	
+	.about-first .about-first-button a{
+		padding: 3rem 3rem;
+	}
+	.about-first .about-first-button span{
+		height: 20px;
+		width: 20px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	.about-first .about-first-text .newsletter-form {
+		padding-top: 5rem;
+	}
+	
+	.about-first .about-first-text .newsletter-form .form-control {
+		position: relative;
+		margin: 20px 0 10px;
+		width: 300px;
+	  }
+	  
+	.about-first .about-first-text .newsletter-form  .form-control .input {
+		font-size: 14px;
+		height: 50px;
+		padding: 1rem 2rem;
+	}
+	  
+	.about-first .about-first-text .newsletter-form .form-control .btn {
+		font-size: 18px;
+		height: 50px;
+		padding: 1rem 3rem;
+	}
+	.about-first-img {
+		bottom: 16rem;
+		width: 300px;
+		left: 6rem;
+	}
+	.about-second-img {
+		bottom: 16rem;
+		width: 300px;
+	}
+	/*ABOUT SECOND*/
+	.about-second .about-second-text{
+		padding: 10rem 35rem 4rem;
+	}
+	.about-second .about-second-text h1{
+		font-size: 40px;
+		line-height: 40px;
+	}
+	.about-second .about-second-text h4{
+		font-size: 34px;
+		line-height: 34px;
+	}
+	
+	.about-second .about-second-text p{
+		font-size: 14px;
+		line-height: 16px;
+	}
+	.about-second .about-second-button{
+		padding-bottom: 2rem;
+	}
+	
+	.about-second .about-second-button a{
+		padding: 3rem 3rem;
+	}
+	.about-second .about-second-button a span {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 20px;
+		width: 20px;
+	}
+	.about-second .about-second-text .text-wrapper {
+		row-gap: 1rem;
+		padding: 2rem 6rem 0;
+	}
+	.about-second-phone {
+		bottom: 15rem;
+		width: 250px;
+		left: 10rem;
+	}
+	.about-second-tv {
+		bottom: 28rem;
+		right: 6rem;
+		width: 250px;
+	}
+	/*ABOUT THIRD*/
+	
+	.about-third .about-third-text{
+		padding: 10rem 35rem 4rem;
+	}
+	.about-third .about-third-text h1{
+		font-size: 40px;
+		line-height: 40px;
+	}
+
+	.about-third .about-third-text p{
+		font-size: 24px;
+		line-height: 30px;
+	}
+	.about-third .about-third-button{
+		padding-bottom: 2rem;
+	}
+
+	.about-third .about-third-button a{
+		padding: 3rem 3rem;
+	}
+	.about-third .about-third-button a span {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 30px;
+		height: 30px;
 	}
 }
