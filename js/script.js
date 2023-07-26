@@ -95,6 +95,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const menuIcon = document.querySelector('.menu-icon svg');
   const sectionTitleDiv = document.querySelector('.section-title');
   const header = document.querySelector('header');
+  const scrollWhite = document.querySelector('.white_scroll');
+  const scrollBlack = document.querySelector('.black_scroll');
 
 
   function isElementInViewport(el) {
@@ -120,12 +122,17 @@ document.addEventListener('DOMContentLoaded', function () {
       if(activeSection.classList.contains('home')) {
         logoWhite.style.display = 'block';
         logoBlack.style.display = 'none';
+        scrollWhite.style.display = 'block';
+        scrollBlack.style.display = 'none';
+        mouse.style.display = 'flex'
         mouse.classList.remove('mouseActive')
         menuIcon.classList.add('active')
         sectionTitleDiv.innerHTML = '';
       }else {
         logoWhite.style.display = 'none';
         logoBlack.style.display = 'block';
+        scrollWhite.style.display = 'none';
+        scrollBlack.style.display = 'block';
         mouse.classList.add('mouseActive')
         menuIcon.classList.remove('active')
         const activeSectionId = activeSection.getAttribute('id')
@@ -139,6 +146,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (activeSectionId === 'home2') {
           sectionTitleDiv.textContent = 'HOME';
+          mouse.style.display = 'none'
         }else if (activeSectionId === 'contactus') {
           sectionTitleDiv.textContent = 'CONTACT US';
         }else{
