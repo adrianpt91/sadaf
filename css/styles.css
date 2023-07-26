@@ -1034,4 +1034,8 @@ header .menu-icon .section-title {
 	.footer-fake .footer-fake-text .footer-fake-menu li {
 		font-size: 20px;
 	}
+	/*FOOTER SCROLL*/
+	.footer .mouse img{
+		width: 60px;
+	}
 }
