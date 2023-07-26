@@ -850,7 +850,7 @@ header .menu-icon .section-title {
 /* ********************************** */
 /*       MEDIA QUERIES -- 1370px       */
 /* ********************************** */
-@media (max-width: 1370px) {
+@media (max-width: 1440px) {
 	/*MENU*/
 	.menu.show .main-menu a li {
 		line-height: 20px;
