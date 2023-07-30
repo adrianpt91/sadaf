@@ -149,7 +149,9 @@ document.addEventListener('DOMContentLoaded', function () {
           mouse.style.display = 'none'
         }else if (activeSectionId === 'contactus') {
           sectionTitleDiv.textContent = 'CONTACT US';
-        }else{
+        }else if (activeSectionId === 'aboutus') {
+          sectionTitleDiv.textContent = 'ABOUT US';
+        }else {
           sectionTitleDiv.textContent = activeSectionId;
         }
       }
