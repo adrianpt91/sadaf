@@ -557,7 +557,9 @@ header .menu-icon .section-title {
 	text-decoration: none;
 }
 .work .work-text .work-filter li:hover,
-.work .work-text .work-filter li:active {
+.work .work-text .work-filter li:active,
+.work .work-text .work-filter li:visited,
+.work .work-text .work-filter li:focus {
 	color: #FFD601;
 }
 
@@ -599,6 +601,7 @@ header .menu-icon .section-title {
 	overflow: hidden;
 	white-space: nowrap;
 	scroll-behavior: smooth;
+	display: flex;
   }
 .work .carousel.dragging{
 	cursor: grab;
@@ -613,6 +616,31 @@ header .menu-icon .section-title {
 	user-select: none;
 	margin-left: 14px;
 	width: 600px;
+	min-width: 600px;
+	opacity: 0;
+  	display: none;
+	transition: all 500s ease;
+  }
+.work .carousel  .view {
+	display: block !important;
+	opacity: 1 !important;
+	transform: scale(1) rotate(0deg);
+	-webkit-animation: selected 300ms 1 ease-in-out;
+			animation: selected 300ms 1 ease-in-out;
+  }
+  
+  @-webkit-keyframes selected {
+	0% {
+	  border-radius:100%;
+	  transform: scale(0) rotate(-180deg);
+	}
+  }
+  
+  @keyframes selected {
+	0% {
+	  border-radius:100%;
+	  transform: scale(0) rotate(-180deg);
+	}
   }
 .work .carousel img:first-child{
 	margin-left: 0px;
@@ -1221,6 +1249,7 @@ header .menu-icon .section-title {
 	.work .carousel img{
 		height: 300px;
 		width: 450px;
+		min-width: 450px;
 	}
 	/*BLOG*/
 	.blog .blog-text h1{
