@@ -562,12 +562,12 @@ header .menu-icon .section-title {
 }
 
 /*Carousel*/
-.wrapper{
+.work .wrapper{
 	display: flex;
 	max-width: 100%;
 	position: relative;
   }
-  .carousel__control {
+.work  .carousel__control {
 	height: 40px;
 	width: 40px;
 	margin-top: -15px;
@@ -582,50 +582,50 @@ header .menu-icon .section-title {
 	outline: 0;
 	z-index: 3;
   }
-  .carousel__control:hover {
+.work .carousel__control:hover {
 	border-color: #fff;
   }
-  .carousel__control--backward {
+.work .carousel__control--backward {
 	left: 2rem;
 	transform: rotate(-135deg);
   }
-  .carousel__control--forward {
+.work .carousel__control--forward {
 	right: 2rem;
 	transform: rotate(45deg);
   }
-  .wrapper .carousel{
+.work .wrapper .carousel{
 	font-size: 0px;
 	cursor: pointer;
 	overflow: hidden;
 	white-space: nowrap;
 	scroll-behavior: smooth;
   }
-  .carousel.dragging{
+.work .carousel.dragging{
 	cursor: grab;
 	scroll-behavior: auto;
   }
-  .carousel.dragging img{
+.work .carousel.dragging img{
 	pointer-events: none;
   }
-  .carousel img{
+.work .carousel img{
 	height: 400px;
 	object-fit: cover;
 	user-select: none;
 	margin-left: 14px;
 	width: 600px;
   }
-  .carousel img:first-child{
+.work .carousel img:first-child{
 	margin-left: 0px;
   }
   
   @media screen and (max-width: 900px) {
-	.carousel img{
+	.work .carousel img{
 	  width: calc(100% / 2);
 	}
   }
   
   @media screen and (max-width: 550px) {
-	.carousel img{
+	.work .carousel img{
 	  width: 100%;
 	}
   }
@@ -1197,10 +1197,14 @@ header .menu-icon .section-title {
 		font-size: 24px;
 	}
 	.work .work-text {
-		padding: 15rem 20rem;
+		padding: 15rem 20rem 5rem;
 	}
 	.work .work-text .work-filter a li {
 		font-size: 18px;
+	}
+	.work .carousel img{
+		height: 300px;
+		width: 450px;
 	}
 	/*BLOG*/
 	.blog .blog-text h1{
