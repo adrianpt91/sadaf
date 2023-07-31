@@ -298,3 +298,22 @@ function animate(item) {
   })(0);
 };
 
+//Init Particle slider
+var init = function(){
+  var ps = new ParticleSlider({
+    width: window.innerWidth,
+    height: window.innerHeight
+  });
+  (window.addEventListener?window.addEventListener('click', function(){ps.init(true)}, false):window.onclick = function(){ps.init(true)});
+}
+
+var initParticleSlider = function(){
+  var psScript = document.createElement('script');
+  (psScript.addEventListener?psScript.addEventListener('load', init, false):psScript.onload = init);
+  psScript.src = 'js/ps.js';
+  psScript.setAttribute('type', 'text/javascript');
+  document.body.appendChild(psScript);
+}
+
+(window.addEventListener?window.addEventListener('load', initParticleSlider,false):window.onload=initParticleSlider);
+
