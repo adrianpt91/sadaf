@@ -146,7 +146,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (activeSectionId === 'home2') {
           sectionTitleDiv.textContent = 'HOME';
-          mouse.style.display = 'none'
         }else if (activeSectionId === 'contactus') {
           sectionTitleDiv.textContent = 'CONTACT US';
         }else if (activeSectionId === 'aboutus') {
