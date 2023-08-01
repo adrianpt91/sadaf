@@ -144,9 +144,9 @@ document.addEventListener('DOMContentLoaded', function () {
           mouse.style.display = 'flex';
         }
 
-        if (activeSectionId === 'home2') {
+        if (activeSectionId === 'home2' || activeSectionId === 'home3') {
           sectionTitleDiv.textContent = 'HOME';
-        }else if (activeSectionId === 'contactus') {
+        }else if (activeSectionId === 'contactus') {          
           sectionTitleDiv.textContent = 'CONTACT US';
         }else if (activeSectionId === 'aboutus') {
           sectionTitleDiv.textContent = 'ABOUT US';

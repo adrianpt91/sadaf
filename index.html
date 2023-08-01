@@ -62,6 +62,10 @@
 			</div>
 		</header>
 
+		<div class="loader" id="loader">
+			<img src="images/loading.gif" alt="loader">
+		</div>
+
 		<div class="menu">
 			<div class="menuItems">
 				<ul class="main-menu">
@@ -112,7 +116,7 @@
 					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, 
 						sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.
 					</p>
-					<div class="home-bottom-button">
+					<!--<div class="home-bottom-button">
 						<a href="#">
 							<span>
 								<svg width="24" height="47" viewBox="0 0 24 47" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -120,16 +124,21 @@
 								</svg>
 							</span>
 						</a>
-					</div>				
+					</div>-->				
 				</div>
-			</section>
-
-			<section class="mini-section">
 				<div class="mini-section-container">
+					<img class="mini-section-back" src="images/mini_section_back.png" alt="subsection background">
 					<img class="square" src="images/mini_section_square.png" alt="yellow square">
 					<img class="pc" src="images/mini_section_img.png" alt="laptop img">
 				</div>
 			</section>
+
+			<!--<section class="mini-section" id="home3">
+				<div class="mini-section-container">
+					<img class="square" src="images/mini_section_square.png" alt="yellow square">
+					<img class="pc" src="images/mini_section_img.png" alt="laptop img">
+				</div>
+			</section>-->
 			
 			<section class="aboutus child" id="aboutus">
 				<div class="about-text">
@@ -410,8 +419,15 @@
 				<img class="white_scroll" src="images/white_scroll.gif" alt="scroll white">
 				<img class="black_scroll" src="images/black_scroll.gif" alt="scroll black">
 			</div>
-		</footer>
+		</footer>		
 		
-		<script type="text/javascript" src="js/script.js"></script>		
+		<script>
+			// Remove the loading screen when the content is loaded
+			window.addEventListener('load', function() {
+			  var loadingFrame = document.getElementById('loader');
+			  loadingFrame.style.display = 'none';
+			});
+		</script>
+		<script type="text/javascript" src="js/script.js"></script>	
 	</body>
 </html>

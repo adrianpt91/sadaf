@@ -32,8 +32,23 @@ html {
 	}
 }
 .child {
-	scroll-snap-align: center;
+	scroll-snap-align: start;
 	min-height: 100vh;	
+}
+.loader {
+	position: fixed; 
+	top: 0; 
+	left: 0; 
+	width: 100%; 
+	height: 100%; 
+	z-index: 9999; 
+	display: flex;
+	background: #fff;
+	justify-content: center;
+	align-items: center;
+}
+.loader img{
+	width: 600px;
 }
 /* ********************************** */
 /*               HEADER               */
@@ -259,6 +274,7 @@ header .menu-icon .section-title {
 	background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+	margin-bottom: 500px;
 }
 .home-bottom .home-bottom-text{
 	width: 100%;
@@ -302,32 +318,37 @@ header .menu-icon .section-title {
 /* ********************************** */
 /*               MINI SECTION         */
 /* ********************************** */
-.mini-section {
+/*.mini-section {
 	height: 48vh;
     background-image: url('../images/mini_section_back.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
-.mini-section .mini-section-container {
+}*/
+.mini-section-container {
 	width: 100%;
     display: flex;
     justify-content: center;
-    height: 100%;
+    height: 500px;
     position: relative;
 }
-.mini-section .mini-section-container .square{
+.mini-section-container .square{
 	position: absolute;
     bottom: 0;
     width: 600px;
     height: auto;
     right: 56rem;
 }
-.mini-section .mini-section-container .pc{
+.mini-section-container .pc{
 	position: absolute;
     bottom: -47rem;
     width: 850px;
     height: auto;
+}
+.mini-section-container .mini-section-back{
+	position: absolute;
+	width: 100%;
+	height: 100%;
 }
 /* ********************************** */
 /*               ABOUT US             */
@@ -396,6 +417,11 @@ header .menu-icon .section-title {
 .aboutus .about-text .read-more a:hover, 
 .aboutus .about-text .read-more a:focus{ 	
 	box-shadow: inset 350px 0 0 0 #fff;
+	color: #000;
+}
+.aboutus .about-text .read-more a:hover svg path, 
+.aboutus .about-text .read-more a:focus svg path{ 	
+	fill: #000;
 }
 
 /* ********************************** */
@@ -953,8 +979,20 @@ header .menu-icon .section-title {
     background: #000;
 	line-height: 35px;
 	text-transform: uppercase;
-	padding: 2rem 5rem;
+	padding: 2rem 3rem;
     border-radius: 50px;
+	border: 0.25rem solid #000;
+	width: 350px;
+	transition: 0.25s;
+}
+.contactus .contactus-text .contactus-more a:hover, 
+.contactus .contactus-text .contactus-more a:focus{ 	
+	box-shadow: inset 350px 0 0 0 #fff;
+	color: #000;
+}
+.contactus .contactus-text .contactus-more a:hover svg path, 
+.contactus .contactus-text .contactus-more a:focus svg path{ 	
+	fill: #000;
 }
 .contactus .contactus-text .contactus-more a span{
 	margin-left: 2rem;
