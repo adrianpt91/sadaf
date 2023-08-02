@@ -316,3 +316,27 @@ var initParticleSlider = function(){
 
 (window.addEventListener?window.addEventListener('load', initParticleSlider,false):window.onload=initParticleSlider);
 
+//Modal logic
+const modal = document.getElementById("myModal");
+const btnOpenModal = document.getElementById("openModalBtn");
+const spanCloseModal = document.getElementsByClassName("close")[0];
+const closeModalBtn = document.querySelector(".close-modal");
+
+function openModal() {
+  modal.style.display = "block";
+}
+
+function closeModal() {
+  modal.style.display = "none";
+}
+
+btnOpenModal.addEventListener("click", openModal);
+
+spanCloseModal.addEventListener("click", closeModal);
+closeModalBtn.addEventListener("click", closeModal);
+
+window.addEventListener("click", function(event) {
+  if (event.target === modal) {
+    closeModal();
+  }
+});

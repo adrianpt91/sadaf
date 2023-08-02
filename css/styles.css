@@ -51,6 +51,189 @@ html {
 	width: 600px;
 }
 /* ********************************** */
+/*               MODAL               */
+/* ********************************** */
+/* The Modal (hidden by default) */
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 10;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.4);
+	transition: all 0.3s ease-in-out;
+  }
+  
+  /* Modal Content */
+  .modal-content {
+	width: 100%;
+	height: 100%;
+	background-image: url('../images/modal_back.png');
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .modal-content .modal-form {
+	width: 100%;
+    height: 100%;
+    padding: 15rem 40rem 10rem 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    text-align: center;
+    row-gap: 2rem;
+  }
+
+  .modal-content .modal-form h1 {
+	color: #000;
+	font-size: 62px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+	text-align: left;
+  }
+
+  .modal-content .modal-form .modal-more{
+	display: flex;
+    justify-content: center;
+	padding: 2rem;
+}
+
+.modal-content .modal-form .modal-more a{
+	font-weight: 700;
+    font-size: 32px;
+    text-decoration: none;
+    color: #fff;
+    background: #000;
+	line-height: 35px;
+	text-transform: uppercase;
+	padding: 2rem 3rem;
+    border-radius: 50px;
+	border: 0.25rem solid #000;
+	width: 350px;
+	transition: 0.25s;
+}
+.modal-content .modal-form .modal-more a:hover, 
+.modal-content .modal-form .modal-more a:focus{ 	
+	box-shadow: inset 350px 0 0 0 #fff;
+	color: #000;
+}
+.modal-content .modal-form .modal-more a:hover svg path, 
+.modal-content .modal-form .modal-more a:focus svg path{ 	
+	fill: #000;
+}
+.modal-content .modal-form .modal-more a span{
+	margin-left: 2rem;
+}
+
+.modal-content .modal-form .back-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.modal-content .modal-form .back-button a{
+	padding: 3rem 3rem;
+	border: 1px solid #000;
+    border-radius: 100%;
+}
+.modal-content .modal-form .back-button a span {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 30px;
+	height: 30px;
+}
+
+  .close svg{
+	width: 35px;
+	height: 35px;
+  }
+
+  .close {
+	position: absolute;
+    top: 0;
+    right: 0;
+    padding: 2rem;
+    rotate: 45deg;
+    background: rgb(0,0,0,0.2);
+    border-radius: 100%;
+    margin: 2rem;
+  }
+    
+  .close:hover,
+  .close:focus {
+	text-decoration: none;
+	cursor: pointer;
+  }
+
+  .contact-form .form-box {
+	position: relative;
+  }
+  
+  .contact-form .form-box input {
+	width: 100%;
+	padding: 2rem 0;
+	color: #fff;
+	margin-bottom: 30px;
+	border: none;
+	border-bottom: 1px solid #000;
+	outline: none;
+	background: transparent;
+	color: #000;
+	font-family: 'Roboto';
+	font-size: 32px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+  }
+  .contact-form .form-box label {
+	position: absolute;
+	top:0;
+	left: 0;
+	padding: 1rem 0;
+	font-size: 32px;
+	color: #000;
+	pointer-events: none;
+	transition: .5s;
+  }
+  
+  .contact-form .form-box input:focus ~ label,
+  .contact-form .form-box input:valid ~ label {
+	top: -25px;
+	left: 0;
+	color: #000;
+	font-size: 24px;
+  }
+
+  textarea {
+	width: 100%;
+    background: transparent;
+    border: 1px solid #000;
+    color: #000;
+	font-family: 'Roboto';
+	font-size: 32px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	margin-top: 2rem;
+	padding: 2rem;
+  }
+
+textarea:focus { 
+	outline: none !important;
+	border-color: #000;
+}
+
+textarea::placeholder {
+	color: #000;
+  }
+  
+/* ********************************** */
 /*               HEADER               */
 /* ********************************** */
 header {

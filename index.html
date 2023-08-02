@@ -348,7 +348,7 @@
 					</div>
 					<div class="contactus-number">02 201 2500</div>
 					<div class="contactus-more">
-						<a href="#">CONTACT US 
+						<a id="openModalBtn" href="#">CONTACT US 
 							<span>
 								<svg width="51" height="24" viewBox="0 0 51 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M50.0607 13.0607C50.6464 12.4749 50.6464 11.5251 50.0607 10.9393L40.5147 1.3934C39.9289 0.807611 38.9792 0.807611 38.3934 1.3934C37.8076 1.97919 37.8076 2.92893 38.3934 3.51472L46.8787 12L38.3934 20.4853C37.8076 21.0711 37.8076 22.0208 38.3934 22.6066C38.9792 23.1924 39.9289 23.1924 40.5147 22.6066L50.0607 13.0607ZM0 13.5H49V10.5H0V13.5Z" fill="#FFF"/>
@@ -419,7 +419,67 @@
 				<img class="white_scroll" src="images/white_scroll.gif" alt="scroll white">
 				<img class="black_scroll" src="images/black_scroll.gif" alt="scroll black">
 			</div>
-		</footer>		
+		</footer>
+		
+		<!-- The Modal -->
+		<div id="myModal" class="modal">
+			<div class="modal-content">
+			  <span class="close">
+				<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+					viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
+					<style type="text/css">
+						.st0{fill:none;stroke:#000000;stroke-width:20;stroke-miterlimit:10;}
+					</style>
+					<g>
+						<line class="st0" x1="250.4" y1="50.7" x2="250.4" y2="449"/>
+					</g>
+					<g>
+						<line class="st0" x1="449.5" y1="249.8" x2="51.2" y2="249.8"/>
+					</g>
+				</svg>
+			  </span>
+			  <div class="modal-form">
+				  	<h1>Hello, nice to meet you :)</h1>
+					<div class="contact-form">
+						<form>
+							<div class="form-box">
+							  <input type="text" name="name" required="">
+							  <label>Your name</label>
+							</div>
+							<div class="form-box">
+							  <input type="text" name="email" required="">
+							  <label>Email</label>
+							</div>
+							<div class="form-box">
+								<input type="text" name="phone" required="">
+								<label>Phone</label>
+							</div>
+							<div class="form-box">
+								<textarea type="text" rows="4" placeholder="Start typing here" name="message" required=""></textarea>
+							</div>
+						</form>
+					</div>
+					<div class="modal-more">
+						<a id="openModalBtn" href="#">SEND 
+							<span>
+								<svg width="51" height="24" viewBox="0 0 51 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M50.0607 13.0607C50.6464 12.4749 50.6464 11.5251 50.0607 10.9393L40.5147 1.3934C39.9289 0.807611 38.9792 0.807611 38.3934 1.3934C37.8076 1.97919 37.8076 2.92893 38.3934 3.51472L46.8787 12L38.3934 20.4853C37.8076 21.0711 37.8076 22.0208 38.3934 22.6066C38.9792 23.1924 39.9289 23.1924 40.5147 22.6066L50.0607 13.0607ZM0 13.5H49V10.5H0V13.5Z" fill="#FFF"/>
+								</svg>
+							</span>
+						</a>
+					</div>
+					<div class="back-button">
+						<a class="close-modal">
+							<span>
+								<svg width="47" height="23" viewBox="0 0 47 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M0.439339 10.4393C-0.146446 11.0251 -0.146446 11.9749 0.439339 12.5607L9.98528 22.1066C10.5711 22.6924 11.5208 22.6924 12.1066 22.1066C12.6924 21.5208 12.6924 20.5711 12.1066 19.9853L3.62132 11.5L12.1066 3.01472C12.6924 2.42893 12.6924 1.47918 12.1066 0.893395C11.5208 0.307608 10.5711 0.307608 9.98528 0.893395L0.439339 10.4393ZM46.5 10L1.5 10L1.5 13L46.5 13L46.5 10Z" fill="black"/>
+								</svg>
+							</span>
+						</a>
+					</div>				  
+			  </div>
+			</div>
+		</div>
 		
 		<script>
 			// Remove the loading screen when the content is loaded
