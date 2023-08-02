@@ -22,7 +22,7 @@ html {
 /* ********************************** */
 @media (min-height: 30em) {
 	main {
-		scroll-snap-type: y mandatory;
+		scroll-snap-type: y proximity;
 		height: 100vh;
 		overflow-y: auto;
 		scroll-behavior: smooth;
@@ -38,7 +38,7 @@ html {
 	}
 }
 .child {
-	scroll-snap-align: center;
+	scroll-snap-align: start;
 	min-height: 100vh;	
 }
 
