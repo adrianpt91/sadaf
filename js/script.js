@@ -26,11 +26,11 @@ const ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-const particleRadius = 3;
-const particleCount = 500;
-const circleRadius = 300;
+const particleRadius = window.innerWidth < 500 ? 2 : 3;;
+const particleCount = window.innerWidth < 500 ? 250 : 500; 
+const circleRadius = window.innerWidth < 500 ? 200 : 300;
 const maxSpeed = 1;
-const motionRadius = 80;
+const motionRadius = window.innerWidth < 500 ? 40 : 80; 
 
 let particles = [];
 

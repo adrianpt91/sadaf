@@ -1576,3 +1576,298 @@ header .menu-icon .section-title {
 		width: 60px;
 	}
 }
+/* ********************************** */
+/*       MEDIA QUERIES -- 1370px       */
+/* ********************************** */
+@media (max-width: 500px) {
+	.loader img{
+		width: 300px;
+	}
+
+	header .logo {
+		margin-left: 10px;
+	}
+
+	header .menu-icon {
+		margin-right: 10px;
+	}
+
+	header .menu-icon .section-title {
+		font-size: 28px;
+		padding: 0 1rem;
+	}
+
+	/*Menu*/
+	.menu.show {
+		padding: 12rem 2rem;
+	}	
+	
+	.menuItems {
+		flex-direction: column;
+		row-gap: 2rem;
+	}
+	.menuItems .social-buttons{
+    	align-items: start;
+	}
+	.menuItems .social-buttons div{
+		flex-direction: column;
+    	row-gap: 2rem;
+	}
+		
+	
+	.menuItems .social-buttons a li{
+		line-height: 20px;
+		font-size: 20px;
+	}
+	.menu.show .contact-block {
+		height: 20%;
+		justify-content: start;
+	}
+	.menu.show .contact-block a li{
+		line-height: 24px;
+		font-size: 24px;
+	}
+
+	/*HOME*/
+	.home-bottom {
+		margin-bottom: 200px;
+	}
+	.home-bottom .home-bottom-text{
+		padding: 12rem 4rem 0;
+		justify-content: start;
+		row-gap: 1rem;
+	}
+	.home-bottom .home-bottom-text h1{
+		font-size: 24px;
+    	line-height: 24px;
+	}
+	
+	.home-bottom .home-bottom-text h1 span{
+		padding: 0;
+	}
+	
+	.home-bottom .home-bottom-text p{
+		font-size: 14px;
+    	line-height: 14px;
+		padding: 2rem 4rem;
+	}
+		
+	/*MINI SECTION*/
+	.mini-section-container {
+		height: 200px;
+	}
+	.mini-section-container .square{
+		width: 220px;
+		right: 4rem;
+	}
+	.mini-section-container .pc{
+		bottom: -17rem;
+		width: 300px;
+	}
+	/*  ABOUT US  */
+	.aboutus .about-text{
+		padding: 10rem 4rem;
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		row-gap: 2rem;
+	}
+	.aboutus .about-text h1{
+		font-size: 28px;
+    	line-height: 28px;
+	}
+	.aboutus .about-text h4{
+		font-size: 20px;
+		line-height: 28px;
+	}
+	
+	.aboutus .about-text p{
+		font-size: 14px;
+		line-height: 18px;
+	}	
+	.aboutus .about-text .read-more a{
+		font-size: 24px;
+		line-height: 28px;
+		padding: 1.5rem 4rem;
+		width: 300px;
+	}
+	.aboutus .about-text .read-more a span{
+		margin-left: 1rem;
+	}
+	.aboutus .about-text .read-more a span svg{
+		width: 35px;
+	}	
+
+	/*SERVICES*/
+	.services .services-text{
+		padding: 10rem 4rem;
+		row-gap: 1rem;
+	}
+	.services .services-text h1{
+		font-size: 24px;
+		line-height: 28px;
+	}
+	.services .services-text h4{
+		font-size: 20px;
+		line-height: 28px;
+	}
+	
+	.services .services-text p{
+		font-size: 12px;
+		line-height: 14px;
+	}
+	
+	.service.first .icon{
+		position: absolute;
+		padding-top: 2rem;
+		width: 20px;
+	}
+	.service.first .service-text{
+		bottom: 3rem;
+		font-size: 12px;
+	}
+	.service.second .icon{
+		padding-top: 2rem;
+		width: 24px;
+	}
+	.service.second .service-text{
+		bottom: 3rem;
+		font-size: 14px;
+	}
+	.service.three .icon{
+		padding-top: 2rem;
+		width: 40PX;
+	}
+	.service.three .service-text{
+		bottom: 3rem;
+		font-size: 12px;
+	}
+	.service.four .icon{
+		padding-top: 2rem;
+		width: 40px;
+	}
+	.service.four .service-text{
+		bottom: 2rem;
+		font-size: 14px;
+	}
+	.service.five .icon{
+		padding-top: 2rem;
+		width: 50px;
+	}
+	.service.five .service-text{
+		bottom: 3rem;
+		font-size: 14px;
+	}
+	.service.six .icon{
+		padding-top: 2rem;
+		width: 50px;
+	}
+	.service.six .service-text{
+		bottom: 2rem;
+		font-size: 14px;
+	}	
+	.services .services-text .services-more .service .circle{
+		width: 120px;
+	}
+	
+	/*WORK*/
+	.work .work-text{
+		padding: 10rem 4rem 2rem;
+	}
+	.work .work-text h1{
+		font-size: 28px;
+    	line-height: 30px;
+	}
+	.work .work-text h4{
+		font-size: 20px;
+		line-height: 28px;
+	}
+	.work .work-text .work-filter a li {
+		line-height: 14px;
+		font-size: 12px;
+		padding: 1rem 0.25rem;
+	}
+	
+	/*Carousel*/
+	.work .wrapper{
+		padding: 0 1rem;
+	}
+	.work  .carousel__control {
+		height: 30px;
+		width: 30px;
+	  }
+	.work .carousel__control--backward {
+		left: 3rem;
+	  }
+	.work .carousel__control--forward {
+		right: 3rem;
+	  }
+	.work .carousel img{
+		height: 250px;
+		width: 350px;
+		min-width: 350px;
+	  }
+
+	/*BLOG*/
+	.blog .blog-text{
+		padding: 10rem 4rem 2rem;
+	}
+	.blog .blog-text h1{
+		font-size: 28px;
+    	line-height: 32px;
+	}
+	.blog .blog-text h4{
+		font-size: 20px;
+		line-height: 28px;
+	}
+	.blog .blog-text .blog-filter a li {
+		line-height: 14px;
+		font-size: 12px;
+		padding: 1rem 0.25rem;
+	}
+	
+	/*Gallery*/
+	.blog .gallerry-wrapper {
+		padding-bottom: 10rem;
+		flex-direction: column;
+	}
+	
+	.blog .gallerry-wrapper .blog-button{
+		padding: 2rem;
+	}
+	
+	.blog .gallerry-wrapper .blog-button a{
+		padding: 1.75rem 1rem;
+	}
+
+	.blog .gallerry-wrapper .blog-button a svg{
+		width: 35px;
+    	height: auto;
+	}	
+	.blog .gallerry-wrapper .gallery figcaption {
+		bottom: 1rem;
+		font-size: 8px;
+		line-height: 12px;
+		left: 1rem;
+		padding-right: 0;
+	}
+	
+	.blog .gallerry-wrapper .gallery .gallery__item--1 figcaption {
+		font-size: 14px;
+		line-height: 20px;
+		bottom: 2rem;
+		padding-right: 1rem;
+	}
+	
+	.blog .gallerry-wrapper .gallery .more-text {
+		bottom: 0.25rem;
+		padding-right: 0.5rem;
+		padding-left: 0.5rem;
+		font-size: 8px;
+	}
+	.blog .gallerry-wrapper .gallery .gallery__item--1 .more-text {
+		bottom: 0.5rem;
+		padding-right: 1rem;
+		padding-left: 1rem;
+	}
+}
