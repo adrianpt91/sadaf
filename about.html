@@ -54,6 +54,10 @@
 			</div>
 		</header>
 
+		<div class="loader" id="loader">
+			<img src="images/loading.gif" alt="loader">
+		</div>
+
 		<div class="menu">
 			<div class="menuItems">
 				<ul class="main-menu">
@@ -251,6 +255,13 @@
 				</div>
 			</section>
 		</main>
+		<script>
+			// Remove the loading screen when the content is loaded
+			window.addEventListener('load', function() {
+			  var loadingFrame = document.getElementById('loader');
+			  loadingFrame.style.display = 'none';
+			});
+		</script>
 		<script type="text/javascript" src="js/about.js"></script>	
 	</body>
 </html>

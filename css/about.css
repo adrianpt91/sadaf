@@ -41,6 +41,22 @@ html {
 	scroll-snap-align: center;
 	min-height: 100vh;	
 }
+
+.loader {
+	position: fixed; 
+	top: 0; 
+	left: 0; 
+	width: 100%; 
+	height: 100%; 
+	z-index: 9999; 
+	display: flex;
+	background: #fff;
+	justify-content: center;
+	align-items: center;
+}
+.loader img{
+	width: 600px;
+}
 /* ********************************** */
 /*               HEADER               */
 /* ********************************** */
@@ -779,5 +795,204 @@ header .menu-icon .section-title {
 	}
 	.about-third .carousel .team-item .team-more .position{
 		font-size: 16px;
+	}
+}
+
+/* ********************************** */
+/*       MEDIA QUERIES -- 500px       */
+/* ********************************** */
+@media (max-width: 500px) {
+	.loader img{
+		width: 300px;
+	}
+
+	header .logo {
+		margin-left: 10px;
+	}
+
+	header .menu-icon {
+		margin-right: 10px;
+	}
+
+	header .menu-icon .section-title {
+		font-size: 22px;
+		padding: 0 1rem;
+	}
+
+	header .menu-icon svg {
+		width: 28px;
+	}
+
+	/*Menu*/
+	.menu.show {
+		padding: 12rem 2rem;
+	}	
+	
+	.menuItems {
+		flex-direction: column;
+		row-gap: 2rem;
+	}
+	.menuItems .social-buttons{
+    	align-items: start;
+	}
+	.menuItems .social-buttons div{
+		flex-direction: column;
+    	row-gap: 2rem;
+	}
+		
+	
+	.menuItems .social-buttons a li{
+		line-height: 20px;
+		font-size: 20px;
+	}
+	.menu.show .contact-block {
+		height: 20%;
+		justify-content: start;
+	}
+	.menu.show .contact-block a li{
+		line-height: 24px;
+		font-size: 24px;
+	}
+	/*  ABOUT FIRST  */
+	.about-first .about-first-text{
+		padding: 12rem 4rem;
+		}
+	.about-first .about-first-text h1{
+		font-size: 32px;
+		line-height: 32px;
+	}
+
+	.about-first .about-first-text h4{
+		font-size: 20px;
+		line-height: 28px;
+		padding: 0
+	}
+	.about-first .about-first-button{
+		padding-bottom: 2rem;
+	}
+
+	.about-first .about-first-button a{
+		padding: 2rem 2rem;
+	}
+
+	.about-first .about-first-text .newsletter-form .form-control {
+		margin: 10px 0 10px;
+		width: 250px;
+	}
+  
+	.about-first .about-first-text .newsletter-form  .form-control .input {
+		font-size: 14px;
+		height: 40px;
+		padding: 1rem 1rem;
+	}
+  
+	.about-first .about-first-text .newsletter-form .form-control .btn {
+		font-size: 14px;
+		height: 40px;
+		padding: 1rem 1rem;
+	}
+	.about-first .about-first-text .newsletter-form {
+		padding-top: 2rem;
+	}
+	.about-first-img {
+		bottom: 24rem;
+		width: 150px;
+		left: 1rem;
+	}
+	.about-second-img {
+		bottom: 24rem;
+		width: 150px;
+		right: 1rem;
+	}
+
+	/* ABOUT SECOND   */
+	.about-second .about-second-text{
+		padding: 12rem 4rem 1rem;
+		justify-content: start;
+	}
+	.about-second .about-second-text h1{
+		font-size: 28px;
+		line-height: 32px;
+	}
+	.about-second .about-second-text h4{
+		font-size: 20px;
+		line-height: 28px;
+	}
+	.about-second .about-second-text p{
+		font-size: 12px;
+		line-height: 14px;
+	}
+	.about-second .about-second-button{
+		padding-bottom: 2rem;
+	}
+
+	.about-second .about-second-button a{
+		padding: 2rem 2rem;
+	}
+	.about-second .about-second-text .text-wrapper {
+		row-gap: 0.25rem;
+		padding: 0;
+	}
+	.about-second-phone {
+		bottom: 10rem;
+		width: 120px;
+		left: 1rem;
+	}
+	.about-second-tv {
+		bottom: 8rem;
+		right: 1rem;
+		width: 120px;
+	}
+	/*  ABOUT THIRD  */
+	.about-third .about-third-text{
+		padding: 12rem 4rem 0rem;
+		row-gap: 2rem;
+	}
+	.about-third .about-third-text h1{
+		font-size: 32px;
+		line-height: 34px;
+	}
+
+	.about-third .about-third-text p{
+		font-size: 20px;
+		line-height: 28px;
+	}
+	.about-third .about-third-button{
+		padding-bottom: 2rem;
+	}
+
+	.about-third .about-third-button a{
+		padding: 2rem 2rem;
+	}
+	/*Carousel*/
+	.about-third .wrapper{
+		padding: 0 3rem 6rem;
+		margin-bottom: 6rem;
+	}
+	.about-third .carousel__control--backward {
+		left: 0.5rem;
+	}
+	.about-third .carousel__control--forward {
+		right: 0.5rem;
+	}
+	.about-third .carousel img{
+		height: auto;
+		width: 100px;
+	}  
+	.about-third .carousel .team-item{
+		margin-left: 10px;
+	}
+	.about-third .carousel .team-item .team-more {
+		bottom: 2rem;
+		padding-right: 0.5rem;
+		padding-left: 0.5rem;
+		color: #fff;
+		font-size: 8px;
+	}
+	.about-third .carousel .team-item .team-more .position{
+		font-size: 8px;
+	}
+	.about-third .carousel__control svg {
+		width: 30px;
 	}
 }
