@@ -342,30 +342,30 @@ window.addEventListener("click", function(event) {
 });
 
 //Animate on scroll
-// Function to check if an element is in the viewport
-// function isElementInViewport(element) {
-//   const rect = element.getBoundingClientRect();
-//   return (
-//       rect.top >= 0 &&
-//       rect.left >= 0 &&
-//       rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-//       rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-//   );
-// }
+const parallaxTitle = document.getElementById('parallax-text');
+const fadeIn = document.getElementById('fade_in');
+const fadeImg1 = document.getElementById('fade_img1');
+const fadeImg2 = document.getElementById('fade_img2');
+const home = document.getElementById('home')
+const home2 = document.getElementById('home2')
 
-// // Function to add animations to the elements in viewport
-// function animateOnScroll() {
-//   const contents = document.querySelectorAll('.content');
-//   contents.forEach(content => {
-//     if (content.getAttribute('data-fade-in') === 'true' && isElementInViewport(content)) {
-//       content.classList.add('fadeIn');
-//       content.removeAttribute('data-fade-in');
-//     }
-//   });
-// }
+main.addEventListener('scroll', () => {
+    const scrollMain = main.scrollTop;
+    const scrollHome = home.scrollHeight;
+    if (scrollMain > scrollHome) {
+      parallaxTitle.style.transform = `scale(1)`;
+      fadeIn.style.opacity = 1;
+      fadeIn.style.transform = `translateY(0)`
+    }else {
+      parallaxTitle.style.transform = `scale(1.3)`;
+      fadeIn.style.opacity = 0;
+      fadeIn.style.transform = `translateY(50px)`
+    }
 
-// // Event listener for scroll event
-// main.addEventListener('scroll', animateOnScroll);
-
-// // Initial animation on page load
-// animateOnScroll();
+    if (scrollMain > scrollHome + 200) {
+      fadeImg1.style.opacity = 1;
+      fadeImg1.style.transform = `translateY(0)`
+      fadeImg2.style.opacity = 1;
+      fadeImg2.style.transform = `translateY(0)`
+    }
+});

@@ -470,6 +470,20 @@ header .menu-icon .section-title {
     background-size: cover;
 	margin-bottom: 500px;
 }
+#parallax-text {
+	transform: scale(1.3);
+    transition: transform 0.3s ease;
+}
+#fade_in {
+	opacity: 0;
+	transform: translateY(50px); 
+    transition: all 0.8s ease-in-out; 
+}
+#fade_img1, #fade_img2 {
+	opacity: 0;
+	transform: translateY(50px); 
+    transition: all 0.8s ease-in-out; 
+}
 .home-bottom .home-bottom-text{
 	width: 100%;
     height: 100%;
