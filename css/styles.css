@@ -50,6 +50,17 @@ html {
 .loader img{
 	width: 600px;
 }
+
+/*.content {
+	opacity: 0;
+	transform: translateY(50px); 
+    transition: all 0.8s ease-in-out; 
+}
+
+.fadeIn {
+	opacity: 1;
+	transform: translateY(0);
+}*/
 /* ********************************** */
 /*               MODAL               */
 /* ********************************** */
@@ -599,8 +610,9 @@ header .menu-icon .section-title {
 
 .aboutus .about-text .read-more a:hover, 
 .aboutus .about-text .read-more a:focus{ 	
-	box-shadow: inset 350px 0 0 0 #fff;
+	/*box-shadow: inset 350px 0 0 0 #fff;*/
 	color: #000;
+	background: transparent;
 }
 .aboutus .about-text .read-more a:hover svg path, 
 .aboutus .about-text .read-more a:focus svg path{ 	
@@ -1170,12 +1182,13 @@ header .menu-icon .section-title {
 }
 .contactus .contactus-text .contactus-more a:hover, 
 .contactus .contactus-text .contactus-more a:focus{ 	
-	box-shadow: inset 350px 0 0 0 #fff;
-	color: #000;
+	/*box-shadow: inset 350px 0 0 0 #fff;
+	color: #000;*/
+	background: transparent;
 }
 .contactus .contactus-text .contactus-more a:hover svg path, 
 .contactus .contactus-text .contactus-more a:focus svg path{ 	
-	fill: #000;
+	/*fill: #000;*/
 }
 .contactus .contactus-text .contactus-more a span{
 	margin-left: 2rem;

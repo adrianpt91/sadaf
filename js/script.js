@@ -340,3 +340,32 @@ window.addEventListener("click", function(event) {
     closeModal();
   }
 });
+
+//Animate on scroll
+// Function to check if an element is in the viewport
+// function isElementInViewport(element) {
+//   const rect = element.getBoundingClientRect();
+//   return (
+//       rect.top >= 0 &&
+//       rect.left >= 0 &&
+//       rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+//       rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+//   );
+// }
+
+// // Function to add animations to the elements in viewport
+// function animateOnScroll() {
+//   const contents = document.querySelectorAll('.content');
+//   contents.forEach(content => {
+//     if (content.getAttribute('data-fade-in') === 'true' && isElementInViewport(content)) {
+//       content.classList.add('fadeIn');
+//       content.removeAttribute('data-fade-in');
+//     }
+//   });
+// }
+
+// // Event listener for scroll event
+// main.addEventListener('scroll', animateOnScroll);
+
+// // Initial animation on page load
+// animateOnScroll();
