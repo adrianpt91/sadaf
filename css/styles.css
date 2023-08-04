@@ -262,7 +262,7 @@ header .logo {
 }
 
 header .logo .white{
-	display: none;
+	display: block;
 }
 
 header .logo .black{
@@ -1349,6 +1349,9 @@ header .menu-icon .section-title {
 }
 .footer .mouse img{
 	width: 80px;
+}
+.footer .white_scroll {
+	display: block;
 }
 /*
 .footer .mouseActive{
