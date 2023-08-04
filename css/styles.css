@@ -1402,6 +1402,20 @@ header .menu-icon .section-title {
 		font-size: 40px;
 		line-height: 50px;
 	}
+	.home-bottom {
+		margin-bottom: 300px;
+	}
+	.mini-section-container {
+		height: 300px;
+	}
+	.mini-section-container .square{
+		width: 280px;
+		right: 50rem;
+	}
+	.mini-section-container .pc{
+		bottom: -22rem;
+		width: 400px;
+	}
 
 	.home-bottom .home-bottom-text p{
 		font-size: 18px;
