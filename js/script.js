@@ -1,6 +1,5 @@
 const menuIcon = document.querySelector('.menu-icon');
 const menu = document.querySelector('.menu');
-const main = document.querySelector('main');
 const logoWhite = document.querySelector('.white');
 const logoBlack = document.querySelector('.black');
 const mouse = document.querySelector('.mouse');
@@ -90,7 +89,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const sections = document.querySelectorAll('section');
   const logoWhite = document.querySelector('.white');
   const logoBlack = document.querySelector('.black');
-  const main = document.querySelector('main');
   const mouse = document.querySelector('.mouse');
   const menuIcon = document.querySelector('.menu-icon svg');
   const sectionTitleDiv = document.querySelector('.section-title');
@@ -161,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function () {
   checkActiveSection();
 
   // Check on scroll to update the active section
-  main.addEventListener('scroll', checkActiveSection);
+  window.addEventListener('scroll', checkActiveSection);
 });
 
 //carousel slider
