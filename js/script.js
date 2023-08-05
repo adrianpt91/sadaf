@@ -342,30 +342,30 @@ window.addEventListener("click", function(event) {
 });
 
 //Animate on scroll
-const parallaxTitle = document.getElementById('parallax-text');
-const fadeIn = document.getElementById('fade_in');
-const fadeImg1 = document.getElementById('fade_img1');
-const fadeImg2 = document.getElementById('fade_img2');
-const home = document.getElementById('home')
-const home2 = document.getElementById('home2')
+// const parallaxTitle = document.getElementById('parallax-text');
+// const fadeIn = document.getElementById('fade_in');
+// const fadeImg1 = document.getElementById('fade_img1');
+// const fadeImg2 = document.getElementById('fade_img2');
+// const home = document.getElementById('home')
+// const home2 = document.getElementById('home2')
 
-main.addEventListener('scroll', () => {
-    const scrollMain = main.scrollTop;
-    const scrollHome = home.scrollHeight;
-    if (scrollMain > scrollHome) {
-      parallaxTitle.style.transform = `scale(1)`;
-      fadeIn.style.opacity = 1;
-      fadeIn.style.transform = `translateY(0)`
-    }else {
-      parallaxTitle.style.transform = `scale(1.3)`;
-      fadeIn.style.opacity = 0;
-      fadeIn.style.transform = `translateY(50px)`
-    }
+// main.addEventListener('scroll', () => {
+//     const scrollMain = main.scrollTop;
+//     const scrollHome = home.scrollHeight;
+//     if (scrollMain > scrollHome) {
+//       parallaxTitle.style.transform = `scale(1)`;
+//       fadeIn.style.opacity = 1;
+//       fadeIn.style.transform = `translateY(0)`
+//     }else {
+//       parallaxTitle.style.transform = `scale(1.3)`;
+//       fadeIn.style.opacity = 0;
+//       fadeIn.style.transform = `translateY(50px)`
+//     }
 
-    if (scrollMain > scrollHome + 200) {
-      fadeImg1.style.opacity = 1;
-      fadeImg1.style.transform = `translateY(0)`
-      fadeImg2.style.opacity = 1;
-      fadeImg2.style.transform = `translateY(0)`
-    }
-});
+//     if (scrollMain > scrollHome + 200) {
+//       fadeImg1.style.opacity = 1;
+//       fadeImg1.style.transform = `translateY(0)`
+//       fadeImg2.style.opacity = 1;
+//       fadeImg2.style.transform = `translateY(0)`
+//     }
+// });
